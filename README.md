@@ -1,6 +1,6 @@
 # Rollup NFT example
 
-Rollup NFT aew designed for the easy integration for Mina protocol rollups
+Rollup NFT is designed for the easy integration with Mina protocol rollups
 
 ## Installation
 
@@ -9,7 +9,7 @@ and clone this repo
 
 ```
 git clone https://github.com/dfstio/rollup-nft-example
-rollup-nft-example
+cd rollup-nft-example
 yarn
 ```
 
