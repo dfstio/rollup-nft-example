@@ -4,7 +4,7 @@ Rollup NFT aew designed for the easy integration for Mina protocol rollups
 
 ## Installation
 
-You need to install node and git
+You need to install node, ts-node and git
 and clone this repo
 
 ```

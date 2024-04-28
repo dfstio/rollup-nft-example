@@ -1,16 +1,15 @@
 import { RollupNFT, MapData } from "minanft";
+import { PINATA_JWT } from "./env.json";
 
 async function main() {
-  const pinataJWT = ""; // use "" to not pin on local network
-  const name = "@test";
+  const pinataJWT = PINATA_JWT;
+  const name = "@rollup";
 
-  const nft = new RollupNFT();
-
-  nft.update({ key: "name", value: `@test` });
-  nft.update({
-    key: `address`,
-    value: `B62qrR3kE3S9xsQy2Jq8tp3TceWDeAmiXhU4KCXh19HzAVPj7BiNAME`,
+  const nft = new RollupNFT({
+    name,
+    address: "B62qj9WtWBGsZFeKKyLysRKqjwUVMqsnpX4kRZ69fs6wZuraUmnVekd",
   });
+
   nft.updateText({
     key: `description`,
     text: "This is my long description of the Rollup NFT @test. Can be of any length, supports **markdown**.",
@@ -46,7 +45,14 @@ async function main() {
   map.updateMap({ key: `level2-4`, map: mapLevel3 });
   nft.updateMap({ key: `level 2 and 3 data`, map });
 
+  await nft.prepareCommitData({ pinataJWT });
+
   console.log(`json:`, nft.toJSON());
+  console.log("Rollup NFT url:", nft.getURL());
+  console.log(
+    "Rollup NFT IPFS uri:",
+    "https://gateway.pinata.cloud/ipfs/" + nft.storage?.toIpfsHash()
+  );
 }
 
 main().catch((error) => {
