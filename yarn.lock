@@ -734,9 +734,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"minanft@npm:^1.10.0":
-  version: 1.10.0
-  resolution: "minanft@npm:1.10.0"
+"minanft@npm:^1.10.1":
+  version: 1.10.1
+  resolution: "minanft@npm:1.10.1"
   dependencies:
     arweave: "npm:^1.15.0"
     axios: "npm:^1.6.8"
@@ -745,7 +745,7 @@ __metadata:
     mime: "npm:^3.0.0"
   peerDependencies:
     o1js: ^1.0.1
-  checksum: 10c0/67979c90f72be8d220649f901140ead8c1da87934eae9516d1ad6cda4a0e34fe5ce855d5d80d0b7e23d254b844cd2c969b83f05523b1e1cddf01ee8e0f4b1ed7
+  checksum: 10c0/a8687229e3f7c51a3416100790e68b8dd08b0f270426a5f7c57b0393965c9d7e99caa9d4dd38cd5851c218cd10fd4009dc961f25f078ed38548f666c354b2c6a
   languageName: node
   linkType: hard
 
@@ -922,7 +922,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "rollup-nft-example@workspace:."
   dependencies:
-    minanft: "npm:^1.10.0"
+    minanft: "npm:^1.10.1"
     o1js: "npm:^1.0.1"
     typescript: "npm:^5.4.5"
   languageName: unknown
